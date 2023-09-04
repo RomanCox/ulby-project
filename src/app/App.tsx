@@ -21,6 +21,7 @@ const App = () => {
             <button onClick={toggleTheme}>TOGGLE</button>
             <Link to={'/'}>Main</Link>
             <Link to={'/about'}>About</Link>
+            <Link to={'/soap'}>SOAP</Link>
 
             <Suspense fallback={<p><i>Loading...</i></p>}>
                 <Routes>
