@@ -1,13 +1,15 @@
 import React, {Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
 
-import {useTheme} from './theme/useTheme';
-import {AboutPageAsync} from './pages/AboutPage/AboutPage.async';
-import {MainPageAsync} from './pages/MainPage/MainPage.async';
-import {SoapPageAsync} from './pages/SoapPage/SoapPage.async';
+import {useTheme} from './providers/ThemeProvider/lib/useTheme';
+import {AboutPage} from 'pages/AboutPage';
+import {MainPage} from 'pages/MainPage';
+import {SoapPageAsync} from 'pages/SoapPage/SoapPage.async';
 
 import './styles/index.scss'
-import {classNames} from "./helpers/classNames/classNames";
+import {classNames} from 'shared/lib/classNames/classNames';
+
+
 
 const App = () => {
     const {theme, toggleTheme} = useTheme();
@@ -22,8 +24,8 @@ const App = () => {
 
             <Suspense fallback={<p><i>Loading...</i></p>}>
                 <Routes>
-                    <Route path={'/about'} element={<AboutPageAsync/>}/>
-                    <Route path={'/'} element={<MainPageAsync/>}/>
+                    <Route path={'/about'} element={<AboutPage/>}/>
+                    <Route path={'/'} element={<MainPage/>}/>
                     <Route path={'/soap'} element={<SoapPageAsync/>}/>
                 </Routes>
             </Suspense>

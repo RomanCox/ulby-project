@@ -9,6 +9,9 @@
     "moduleResolution": "node",
     //For absolute import
     "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
