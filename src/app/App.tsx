@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
 
-import {useTheme} from './providers/ThemeProvider/lib/useTheme';
+import {useTheme} from './providers/ThemeProvider';
 import {AboutPage} from 'pages/AboutPage';
 import {MainPage} from 'pages/MainPage';
 import {SoapPageAsync} from 'pages/SoapPage/SoapPage.async';
