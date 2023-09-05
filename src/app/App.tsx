@@ -1,35 +1,26 @@
-import React, {Suspense} from 'react';
-import {Link, Route, Routes} from 'react-router-dom';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
+import {AppRouter} from 'app/providers/router';
+import {RoutePath} from 'shared/config/routeConfig/routeConfig';
 import {useTheme} from './providers/ThemeProvider';
-import {AboutPage} from 'pages/AboutPage';
-import {MainPage} from 'pages/MainPage';
-import {SoapPageAsync} from 'pages/SoapPage/SoapPage.async';
 
 import './styles/index.scss'
 import {classNames} from 'shared/lib/classNames/classNames';
 
 
 
+
 const App = () => {
     const {theme, toggleTheme} = useTheme();
-
-
 
     return (
         <div className={classNames('app', {}, [theme])}>
             <button onClick={toggleTheme}>TOGGLE</button>
-            <Link to={'/'}>Main</Link>
-            <Link to={'/about'}>About</Link>
-            <Link to={'/soap'}>SOAP</Link>
-
-            <Suspense fallback={<p><i>Loading...</i></p>}>
-                <Routes>
-                    <Route path={'/about'} element={<AboutPage/>}/>
-                    <Route path={'/'} element={<MainPage/>}/>
-                    <Route path={'/soap'} element={<SoapPageAsync/>}/>
-                </Routes>
-            </Suspense>
+            <Link to={RoutePath.main}>Main</Link>
+            <Link to={RoutePath.about}>About</Link>
+            <Link to={RoutePath.soap}>SOAP</Link>
+            <AppRouter/>
         </div>
     );
 };
