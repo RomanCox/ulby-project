@@ -1,14 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 import {AppRouter} from 'app/providers/router';
-import {RoutePath} from 'shared/config/routeConfig/routeConfig';
+import {Navbar} from 'widgets/Navbar';
 import {useTheme} from './providers/ThemeProvider';
 
 import './styles/index.scss'
 import {classNames} from 'shared/lib/classNames/classNames';
-
-
 
 
 const App = () => {
@@ -16,11 +13,9 @@ const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <button onClick={toggleTheme}>TOGGLE</button>
-            <Link to={RoutePath.main}>Main</Link>
-            <Link to={RoutePath.about}>About</Link>
-            <Link to={RoutePath.soap}>SOAP</Link>
+            <Navbar/>
             <AppRouter/>
+            <button onClick={toggleTheme}>TOGGLE</button>
         </div>
     );
 };
