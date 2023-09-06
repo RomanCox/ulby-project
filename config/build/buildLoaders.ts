@@ -31,7 +31,6 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
                         {
                             locales: ['en', 'ru'],
                             keyAsDefaultValue: true,
-                            "nsSeparator": "~"
                         }
                     ].filter(Boolean),
                 },
