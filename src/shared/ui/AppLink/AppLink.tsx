@@ -15,7 +15,7 @@ interface AppLinkPropsType extends LinkProps{
     theme?: AppLinkTheme,
 }
 
-const AppLink: FC<AppLinkPropsType> = (props) => {
+export const AppLink: FC<AppLinkPropsType> = (props) => {
     const {
         to,
         className ,
@@ -34,5 +34,3 @@ const AppLink: FC<AppLinkPropsType> = (props) => {
         </Link>
     );
 };
-
-export default AppLink;

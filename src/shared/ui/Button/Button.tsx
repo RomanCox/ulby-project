@@ -13,7 +13,7 @@ interface ButtonPropsType extends ButtonHTMLAttributes<HTMLButtonElement>{
     theme: ThemeButton,
 }
 
-const Button: FC<ButtonPropsType> = (props) => {
+export const Button: FC<ButtonPropsType> = (props) => {
     const {
         className,
         children,
@@ -30,5 +30,3 @@ const Button: FC<ButtonPropsType> = (props) => {
         </button>
     );
 };
-
-export default Button;
