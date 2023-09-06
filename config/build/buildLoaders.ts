@@ -21,21 +21,21 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     const babelLoader = {
         test: /\.(js|jsx|tsx)$/,
         exclude: /node_modules/,
-        use: [
-            {
-                loader: require.resolve('babel-loader'),
-                options: {
-                    plugins: [
-                        isDev && require.resolve('react-refresh/babel'),
-                        "i18next-extract",
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env'],
+                plugins: [
+                    [
+                        'i18next-extract',
                         {
                             locales: ['en', 'ru'],
                             keyAsDefaultValue: true,
-                        }
-                    ].filter(Boolean),
-                },
+                        },
+                        //isDev && 'react-refresh/babel',
+                    ],                ]
             },
-        ],
+        },
     };
 
     //if we don`t use TypeScript - we need a babel-loader
