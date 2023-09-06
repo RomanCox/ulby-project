@@ -121,6 +121,7 @@ const SoapPage = () => {
         //let response =
         await fetch('https://wstest.dpd.ru/services/calculator2?wsdl', {
             method: 'POST',
+            mode:'no-cors',
             headers: {
                 'Content-Type': 'text/xml',
             },
