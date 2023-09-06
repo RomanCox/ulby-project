@@ -1,5 +1,4 @@
 import React from 'react';
-import {Simulate} from "react-dom/test-utils";
 
 const SoapPage = () => {
     const clientNumber = 1158000268;
