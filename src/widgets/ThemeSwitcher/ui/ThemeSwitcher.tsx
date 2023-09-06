@@ -8,7 +8,6 @@ import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import {classNames} from 'shared/lib/classNames/classNames';
 
 import cls from './ThemeSwitcher.module.scss';
-import {AppLink} from "shared/ui/AppLink/AppLink";
 
 interface ThemeSwitcherPropsType {
     className?: string,
