@@ -1,6 +1,5 @@
 import React from 'react';
 import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
 
 const SoapPage = () => {
     const clientNumber = 1158000268;
