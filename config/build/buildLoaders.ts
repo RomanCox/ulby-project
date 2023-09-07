@@ -1,9 +1,8 @@
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import {BuildOptions} from './types/config';
+import { BuildOptions } from './types/config';
 
-export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
-
+export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const fileLoader = {
         test: /\.(png|jpe?g|gif|webp|woff2|woff)$/i,
         use: [
@@ -16,7 +15,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
-    }
+    };
 
     const babelLoader = {
         test: /\.(js|jsx|tsx)$/,
@@ -32,13 +31,13 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
                             locales: ['en', 'ru'],
                             keyAsDefaultValue: true,
                         },
-                        //isDev && 'react-refresh/babel',
-                    ],                ]
+                        // isDev && 'react-refresh/babel',
+                    ]],
             },
         },
     };
 
-    //if we don`t use TypeScript - we need a babel-loader
+    // if we don`t use TypeScript - we need a babel-loader
     const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -52,7 +51,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             // Translates CSS into CommonJS
             {
-                //test: /\.css$/i,
+                // test: /\.css$/i,
                 loader: 'css-loader',
                 options: {
                     modules: {
@@ -74,5 +73,5 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         babelLoader,
         typescriptLoader,
         cssLoader,
-    ]
+    ];
 }

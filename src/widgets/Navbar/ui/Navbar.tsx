@@ -1,17 +1,17 @@
 import React from 'react';
 
-import {RoutePath} from 'shared/config/routeConfig/routeConfig';
-import {classNames} from 'shared/lib/classNames/classNames';
-import {AppLink} from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
 
+import { useTranslation } from 'react-i18next';
 import cls from './Navbar.module.scss';
-import {useTranslation} from "react-i18next";
 
 interface NavbarPropsType {
     className?: string,
 }
 
-const Navbar = ({className}: NavbarPropsType) => {
+const Navbar = ({ className }: NavbarPropsType) => {
     const { t } = useTranslation();
 
     return (

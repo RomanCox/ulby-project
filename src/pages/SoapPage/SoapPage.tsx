@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'shared/ui/Button/Button';
 
 const SoapPage = () => {
     const clientNumber = 1158000268;
@@ -22,11 +23,10 @@ const SoapPage = () => {
     const quantity = 1;
 
     const soap = () => {
-        let xmlhttp = new XMLHttpRequest();
+        const xmlhttp = new XMLHttpRequest();
 
-        let body =
-            '<?xml version="1.0" encoding="utf-8"?>' +
-            `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> \
+        const body = '<?xml version="1.0" encoding="utf-8"?>'
+            + `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> \
             <soapenv:Header/> \
             <soapenv:Body> \
             <ns:getServiceCostByParcels2 xmlns="http://dpd.ru/ws/calculator/2012-03-20"> \
@@ -72,17 +72,16 @@ const SoapPage = () => {
         xmlhttp.send(body);
 
         xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState == 4) {
-                if (xmlhttp.status == 200) {
+            if (xmlhttp.readyState === 4) {
+                if (xmlhttp.status === 200) {
                     console.log(xmlhttp.responseXML);
                 }
             }
         };
-    }
+    };
 
     const soapFetch = async () => {
-        const body =
-            `<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/"> \
+        const body = `<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/"> \
                 <Body> \
                     <getServiceCostByParcels2 xmlns="http://dpd.ru/ws/calculator/2012-03-20"> \
                         <request xmlns=""> \
@@ -118,22 +117,22 @@ const SoapPage = () => {
                 </Body> \
             </Envelope>`;
 
-        //let response =
+        // let response =
         await fetch('https://wstest.dpd.ru/services/calculator2?wsdl', {
             method: 'POST',
-            mode:'no-cors',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'text/xml',
             },
-            body: body
+            body,
         }).then((res) => {
-            console.log(res)
-        })
-    }
+            console.log(res);
+        });
+    };
 
     return (
         <div>
-            <button onClick={soapFetch}>SOAP</button>
+            <Button onClick={soapFetch}>SOAP</Button>
         </div>
     );
 };
