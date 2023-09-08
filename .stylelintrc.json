@@ -1,7 +1,18 @@
 {
   "extends": "stylelint-config-standard-scss",
   "rules": {
-    "indentation": [4],
-    "selector-class-pattern": null
+    "string-quotes": "single",
+    "indentation": [2],
+    "selector-class-pattern": null,
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "ignore": [
+          "after-comment",
+          "first-nested"
+        ]
+      }
+    ],
+    "no-missing-end-of-source-newline": []
   }
 }
