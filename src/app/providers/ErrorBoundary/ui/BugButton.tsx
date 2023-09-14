@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { Button } from 'shared/ui/Button/Button';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Button } from 'shared/ui/Button/Button';
-
-// Component for testingErrorBoundary
-const BugButton = () => {
-    const [error, setError] = useState<boolean>(false);
+// Компонент для тестирования ErrorBoundary
+export const BugButton = () => {
+    const [error, setError] = useState(false);
     const { t } = useTranslation();
 
     const onThrow = () => setError(true);
@@ -24,5 +23,3 @@ const BugButton = () => {
         </Button>
     );
 };
-
-export default BugButton;

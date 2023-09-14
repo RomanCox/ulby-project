@@ -12,7 +12,7 @@
     // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
     "allowJs": true,
     "moduleResolution": "node",
-    //For absolute import
+    // Для абсолютного импорта
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]

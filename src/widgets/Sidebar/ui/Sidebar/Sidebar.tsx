@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { classNames } from 'shared/lib/classNames/classNames';
-
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { LangSwitcher } from 'widgets/LangSwitcher';
+import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
 import { Button } from 'shared/ui/Button/Button';
 
 import cls from './Sidebar.module.scss';
 
-interface SidebarPropsType {
-    className?: string,
+interface SidebarProps {
+    className?: string;
 }
 
-const Sidebar = ({ className }: SidebarPropsType) => {
-    const [collapsed, setCollapsed] = useState<boolean>(false);
+export const Sidebar = ({ className }: SidebarProps) => {
+    const [collapsed, setCollapsed] = useState(false);
     const { t } = useTranslation();
 
     const onToggle = () => {
@@ -34,10 +33,8 @@ const Sidebar = ({ className }: SidebarPropsType) => {
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher />
+                <LangSwitcher className={cls.lang} />
             </div>
         </div>
     );
 };
-
-export default Sidebar;
