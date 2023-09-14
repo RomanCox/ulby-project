@@ -132,6 +132,7 @@ const SoapPage = () => {
 
     return (
         <div>
+            {/* eslint-disable-next-line i18next/no-literal-string */}
             <Button onClick={soapFetch}>SOAP</Button>
         </div>
     );
