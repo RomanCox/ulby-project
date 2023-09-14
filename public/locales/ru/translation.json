@@ -3,8 +3,8 @@
   "About us": "О сайте",
   "Main page": "Главная",
   "Page not found": "Страница не найдена",
-  "Something went wrong": "Something went wrong",
-  "Reload page": "Reload page",
-  "throw error": "throw error",
-  "toggle": "toggle"
+  "Something went wrong": "Что-то пошло не так",
+  "Reload page": "Перезагрузить страницу",
+  "throw error": "выбросить ошибку",
+  "toggle": "переключить"
 }
