@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 // Компонент для тестирования ErrorBoundary
 export const BugButton = () => {
-    const [error, setError] = useState(false);
+    const [error, setError] = useState<boolean>(false);
     const { t } = useTranslation();
 
     const onThrow = () => setError(true);
