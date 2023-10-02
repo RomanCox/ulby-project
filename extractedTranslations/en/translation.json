@@ -1,6 +1,8 @@
 {
   "About us": "",
   "About us13901": "About us13901",
+  "Enter password": "Enter password",
+  "Enter username": "Enter username",
   "Language": "",
   "Login": "Login",
   "Main page": "",
@@ -9,9 +11,12 @@
   "Something went wrong": "Something went wrong",
   "throw error": "throw error",
   "toggle": "toggle",
+  "Войти": "Войти",
   "Главная": "Главная",
   "О сайте": "О сайте",
   "Обновить страницу": "Обновить страницу",
+  "Пароль": "Пароль",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Юзернейм": "Юзернейм",
   "Язык": "Язык"
 }

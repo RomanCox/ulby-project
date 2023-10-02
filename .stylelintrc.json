@@ -9,7 +9,8 @@
       {
         "ignore": [
           "after-comment",
-          "first-nested"
+          "first-nested",
+          "empty-lines"
         ]
       }
     ],

@@ -8,5 +8,7 @@
   "Reload page": "Перезагрузить страницу",
   "throw error": "выбросить ошибку",
   "toggle": "переключить",
-  "Login": "Войти"
+  "Login": "Войти",
+  "Enter username": "Enter username",
+  "Enter password": "Enter password"
 }
