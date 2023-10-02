@@ -4,7 +4,6 @@ import React, {
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
-import { useTranslation } from 'react-i18next';
 import cls from './Input.module.scss';
 
 type HTMLInputPropsType = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
@@ -17,7 +16,6 @@ interface InputPropsType extends HTMLInputPropsType {
 }
 
 const Input = memo((props: InputPropsType) => {
-    const { t } = useTranslation();
     const [isFocused, setIsFocused] = useState<boolean>(false);
     const [carriagePosition, setCarriagePosition] = useState<number>(0);
     const inputRef = useRef<HTMLInputElement>(null);
