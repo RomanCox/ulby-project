@@ -15,7 +15,7 @@ interface InputPropsType extends HTMLInputPropsType {
     autoFocus?: boolean,
 }
 
-const Input = memo((props: InputPropsType) => {
+export const Input = memo((props: InputPropsType) => {
     const [isFocused, setIsFocused] = useState<boolean>(false);
     const [carriagePosition, setCarriagePosition] = useState<number>(0);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -83,5 +83,3 @@ const Input = memo((props: InputPropsType) => {
         </div>
     );
 });
-
-export default Input;

@@ -4,14 +4,14 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button/Button';
-import Input from 'shared/ui/Input/Input';
+import { Input } from 'shared/ui/Input/Input';
 import cls from './LoginForm.module.scss';
 
 interface LoginFormPropsType {
     className?: string,
 }
 
-const LoginForm = ({ className }: LoginFormPropsType) => {
+export const LoginForm = ({ className }: LoginFormPropsType) => {
     const { t } = useTranslation();
 
     return (
@@ -29,5 +29,3 @@ const LoginForm = ({ className }: LoginFormPropsType) => {
         </div>
     );
 };
-
-export default LoginForm;
