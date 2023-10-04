@@ -2,13 +2,17 @@
   "Language": "English",
   "Lang": "En",
   "About us": "О сайте",
-  "Main page": "Главная",
+  "Main page": "Главная страница",
   "Page not found": "Страница не найдена",
   "Something went wrong": "Что-то пошло не так",
   "Reload page": "Перезагрузить страницу",
   "throw error": "выбросить ошибку",
   "toggle": "переключить",
   "Login": "Войти",
-  "Enter username": "Enter username",
-  "Enter password": "Enter password"
+  "Enter username": "Введите username",
+  "Enter password": "Введите пароль",
+  "About": "About",
+  "Main": "Главная",
+  "Wrong username or password": "Неверное имя пользователя или пароль",
+  "Logout": "Выйти"
 }

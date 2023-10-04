@@ -10,5 +10,9 @@
   "toggle": "toggle",
   "Login": "Login",
   "Enter username": "Enter username",
-  "Enter password": "Enter password"
+  "Enter password": "Enter password",
+  "About": "About",
+  "Main": "Main",
+  "Wrong username or password": "Wrong username or password",
+  "Logout": "Logout"
 }
