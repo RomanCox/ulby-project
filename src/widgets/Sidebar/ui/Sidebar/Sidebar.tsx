@@ -47,9 +47,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
                     className={cls.item}
                 >
                     <MainIcon className={cls.icon} />
-                    <span className={cls.link}>
-                        {t('Main')}
-                    </span>
+                    {!collapsed && (
+                        <span className={cls.link}>
+                            {t('Main')}
+                        </span>
+                    )}
                 </AppLink>
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
@@ -57,9 +59,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
                     className={cls.item}
                 >
                     <AboutIcon className={cls.icon} />
-                    <span className={cls.link}>
-                        {t('About')}
-                    </span>
+                    {!collapsed && (
+                        <span className={cls.link}>
+                            {t('About')}
+                        </span>
+                    )}
                 </AppLink>
             </div>
             <div className={cls.switchers}>

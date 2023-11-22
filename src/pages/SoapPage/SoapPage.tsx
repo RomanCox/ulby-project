@@ -1,139 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'shared/ui/Button/Button';
+import axios from 'axios';
+
+interface CityType {
+    cityCode: string;
+    cityId: string;
+    cityName: string;
+    cityType: string;
+    countryCode: string;
+    countryName: string;
+    regionCode: string;
+    regionName: string;
+}
 
 const SoapPage = () => {
-    const clientNumber = 1158000268;
-    const key = 'EF601DF80BAEF8720F74A933322F3A621132999D';
-    const pickUpCityId = 49694167;
-    const pickUpIndex = 195273;
-    const pickUpCityName = 'Санкт-Петербург';
-    const pickUpRegionCode = 78;
-    const pickUpCountryCode = 'RU';
-    const deliveryCityId = 195736831;
-    const deliveryIndex = 214000;
-    const deliveryCityName = 'Смоленск';
-    const deliveryRegionCode = 67;
-    const deliveryCountryCode = 'RU';
-    const selfPickup = false;
-    const selfDelivery = false;
-    const weight = 0.8;
-    const length = 300;
-    const width = 1;
-    const height = 6;
-    const quantity = 1;
+    const initialData = {
+        clientNumber: 1158000268,
+        key: 'EF601DF80BAEF8720F74A933322F3A621132999D',
+        pickUpCityId: 49694167,
+        pickUpIndex: 195273,
+        pickUpCityName: 'Санкт-Петербург',
+        pickUpRegionCode: 78,
+        pickUpCountryCode: 'RU',
+        deliveryCityId: 0,
+        deliveryIndex: 613310,
+        deliveryCityName: '',
+        deliveryRegionCode: 0,
+        deliveryCountryCode: '',
+        selfPickup: false,
+        selfDelivery: false,
+        weight: 0.8,
+        length: 300,
+        width: 1,
+        height: 6,
+        quantity: 1,
+    };
+    const [data, setData] = useState(initialData);
 
-    const soap = () => {
-        const xmlhttp = new XMLHttpRequest();
+    const cityName = 'москва';
 
-        const body = '<?xml version="1.0" encoding="utf-8"?>'
-            + `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> \
-            <soapenv:Header/> \
-            <soapenv:Body> \
-            <ns:getServiceCostByParcels2 xmlns="http://dpd.ru/ws/calculator/2012-03-20"> \
-            <request xmlns=""> \
-            <auth> \
-            <clientNumber>${clientNumber}</clientNumber> \
-            <clientKey>${key}</clientKey> \
-            </auth> \
-            <pickup> \
-            <cityId>${pickUpCityId}</cityId> \
-            <index>${pickUpIndex}</index> \
-            <cityName>${pickUpCityName}</cityName> \
-            <regionCode>${pickUpRegionCode}</regionCode> \
-            <countryCode>${pickUpCountryCode}</countryCode> \
-            </pickup> \
-            <delivery> \
-            <cityId>${deliveryCityId}</cityId> \
-            <index>${deliveryIndex}</index> \
-            <cityName>${deliveryCityName}</cityName> \
-            <regionCode>${deliveryRegionCode}</regionCode> \
-            <countryCode>${deliveryCountryCode}</countryCode> \
-            </delivery> \
-            <selfPickup>${selfPickup}</selfPickup> \
-            <selfDelivery>${selfDelivery}</selfDelivery> \
-            <parcel> \
-            <weight>${weight}</weight> \
-            <length>${length}</length> \
-            <width>${width}</width> \
-            <height>${height}</height> \
-            <quantity>${quantity}</quantity> \
-            </parcel> \
-            </request> \
-            </ns:getCitiesCashPay> \
-            </soapenv:Body> \
-            </soapenv:Envelope>`;
-
-        // Send the POST request
-
-        xmlhttp.withCredentials = true;
-        xmlhttp.open('POST', 'https://wstest.dpd.ru/services/calculator2?wsdl', true);
-        xmlhttp.setRequestHeader('Content-Type', 'text/xml');
-        xmlhttp.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-        xmlhttp.send(body);
-
-        xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState === 4) {
-                if (xmlhttp.status === 200) {
-                    console.log(xmlhttp.responseXML);
-                }
-            }
-        };
+    const cityInfoRequest = async () => {
+        await axios.get(`http://localhost:8000/cityinfo?cityname=${cityName}`)
+            .then((res) => {
+                const newData = {
+                    ...data,
+                    deliveryCityId: +res.data[0].cityId,
+                    deliveryCityName: res.data[0].cityName,
+                    deliveryRegionCode: +res.data[0].regionCode,
+                    deliveryCountryCode: res.data[0].countryCode,
+                };
+                setData(newData);
+            });
+        // await axios.put('http://localhost:8000/cityinfo', { cityName })
+        //     .then((res) => console.log(res.data));
     };
 
-    const soapFetch = async () => {
-        const body = `<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/"> \
-                <Body> \
-                    <getServiceCostByParcels2 xmlns="http://dpd.ru/ws/calculator/2012-03-20"> \
-                        <request xmlns=""> \
-                            <auth> \
-                                <clientNumber>${clientNumber}</clientNumber> \
-                                <clientKey>${key}</clientKey> \
-                            </auth> \
-                            <pickup> \
-                                <cityId>${pickUpCityId}</cityId> \
-                                <index>${pickUpIndex}</index> \
-                                <cityName>${pickUpCityName}</cityName> \
-                                <regionCode>${pickUpRegionCode}</regionCode> \
-                                <countryCode>${pickUpCountryCode}</countryCode> \
-                            </pickup> \
-                            <delivery> \
-                                <cityId>${deliveryCityId}</cityId> \
-                                <index>${deliveryIndex}</index> \
-                                <cityName>${deliveryCityName}</cityName> \
-                                <regionCode>${deliveryRegionCode}</regionCode> \
-                                <countryCode>${deliveryCountryCode}</countryCode> \
-                            </delivery> \
-                            <selfPickup>${selfPickup}</selfPickup> \
-                            <selfDelivery>${selfDelivery}</selfDelivery> \
-                            <parcel> \
-                                <weight>${weight}</weight> \
-                                <length>${length}</length> \
-                                <width>${width}</width> \
-                                <height>${height}</height> \
-                                <quantity>${quantity}</quantity> \
-                            </parcel> \
-                        </request> \
-                    </getServiceCostByParcels2> \
-                </Body> \
-            </Envelope>`;
-
-        // let response =
-        await fetch('https://wstest.dpd.ru/services/calculator2?wsdl', {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'text/xml',
-            },
-            body,
-        }).then((res) => {
-            console.log(res);
-        });
+    const costRequest = async () => {
+        await axios.post<Array<CityType>>('http://localhost:8000/cost', data)
+            .then((res) => console.log(res.data));
     };
 
     return (
         <div>
             {/* eslint-disable-next-line i18next/no-literal-string */}
-            <Button onClick={soapFetch}>SOAP</Button>
+            <Button onClick={cityInfoRequest}>CityInfo</Button>
+            {/* eslint-disable-next-line i18next/no-literal-string */}
+            <Button onClick={costRequest}>Cost</Button>
         </div>
     );
 };
