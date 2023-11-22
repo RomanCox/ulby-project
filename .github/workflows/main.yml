@@ -35,9 +35,6 @@ jobs:
       - name: build storybook
         run: npm run storybook:build
         if: always()
-      - name: loki update
-        run: nom loki update --storiesFilter="^widget\\/Navbar Dark\$" --reactUri="file:./storybook-static"
-        if: always()
       - name: screenshot testing
         run: npm run test:ui:ci
         if: always()
