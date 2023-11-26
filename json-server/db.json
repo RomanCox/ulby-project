@@ -15,5 +15,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Roman",
+    "last": "Cox",
+    "age": 25,
+    "currency": "BTC",
+    "country": "Spain",
+    "city": "Barcelona",
+    "username": "roman_cox",
+    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+  }
 }
