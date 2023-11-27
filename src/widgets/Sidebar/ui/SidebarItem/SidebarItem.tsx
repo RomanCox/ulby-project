@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
@@ -7,8 +7,8 @@ import { SidebarItemType } from '../../model/items';
 import cls from './SidebarItem.module.scss';
 
 interface SidebarItemPropsType {
-    collapsed?: boolean,
-    item?: SidebarItemType,
+    collapsed: boolean,
+    item: SidebarItemType,
 }
 
 export const SidebarItem = memo(({ collapsed, item }: SidebarItemPropsType) => {

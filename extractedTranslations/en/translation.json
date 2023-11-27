@@ -1,8 +1,10 @@
 {
+  "": "",
   "About": "About",
   "About us": "About us",
   "An unexpected error occurred": "An unexpected error occurred",
   "Authorization form": "Authorization form",
+  "Edit": "Edit",
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Login": "Login",
@@ -10,9 +12,13 @@
   "Main": "Main",
   "Main page": "Main page",
   "Page not found": "Page not found",
+  "Profile": "Profile",
   "Profile page": "Profile page",
   "Reload page": "Reload page",
   "Throw error": "Throw error",
   "Wrong username or password": "Wrong username or password",
+  "Your first name": "Your first name",
+  "Your last name": "Your last name",
+  "Your name": "Your name",
   "throw error": "throw error"
 }

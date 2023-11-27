@@ -16,5 +16,9 @@
   "Main": "Главная",
   "Wrong username or password": "Неверное имя пользователя или пароль",
   "Logout": "Выйти",
-  "Profile page": "Страница профиля"
+  "Profile page": "Страница профиля",
+  "Profile": "Профайл пользователя",
+  "Edit": "Редактировать профайл",
+  "Your first name": "Ваше имя",
+  "Your last name": "Ваша фамилия"
 }
