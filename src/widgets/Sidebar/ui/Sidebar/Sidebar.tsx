@@ -1,4 +1,4 @@
-import { memo, useState } from 'react';
+import { memo, useMemo, useState } from 'react';
 
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
@@ -20,6 +20,14 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         setCollapsed((prev) => !prev);
     };
 
+    const itemsList = useMemo(() => SidebarItemsList.map((item) => (
+        <SidebarItem
+            key={item.path}
+            collapsed={collapsed}
+            item={item}
+        />
+    )), [collapsed]);
+
     return (
         <div
             data-testid="sidebar"
@@ -36,7 +44,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 {collapsed ? '>' : '<'}
             </Button>
             <div className={cls.items}>
-                {SidebarItemsList.map((item) => <SidebarItem key={item.path} collapsed={collapsed} item={item} />)}
+                {itemsList}
             </div>
             <div className={cls.switchers}>
                 <ThemeSwitcher />

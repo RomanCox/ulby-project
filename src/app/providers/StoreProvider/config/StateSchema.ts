@@ -11,12 +11,12 @@ import { To } from 'history';
 import { NavigateOptions } from 'react-router';
 
 export interface StateSchema {
-    counter: CounterSchema,
-    user: UserSchema,
+    counter: CounterSchema;
+    user: UserSchema;
 
     // Async reducers
-    loginForm?: LoginSchema,
-    profile?: ProfileSchema
+    loginForm?: LoginSchema;
+    profile?: ProfileSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
@@ -41,4 +41,5 @@ export interface ThunkConfig<T> {
     rejectValue: T;
     extra: ThunkExtraArg;
     dispatch: Dispatch;
+    state: StateSchema;
 }

@@ -1,6 +1,16 @@
 {
-  "Profile": "User profile",
+  "Profile": "Profile",
+  "User Profile": "User profile",
   "Edit": "Edit profile",
   "Your first name": "Your first name",
-  "Your last name": "Your last name"
+  "Your last name": "Your last name",
+  "Error": "An unexpected error occurred",
+  "Reload page": "Reload page",
+  "Username": "Enter your username",
+  "Your age": "Enter your age",
+  "Country": "Enter your country",
+  "Currency": "Choose your currency",
+  "City": "Enter your city",
+  "Avatar": "Enter link to avatar",
+  "Choose currency": "Choose currency"
 }

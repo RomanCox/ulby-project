@@ -5,7 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './NotFoundPage.module.scss';
 
 export interface NotFoundPagePropsType {
-    className?: string,
+    className?: string;
 }
 
 const NotFoundPage = ({ className }: NotFoundPagePropsType) => {

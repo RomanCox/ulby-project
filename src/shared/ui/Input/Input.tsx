@@ -2,23 +2,35 @@ import React, {
     InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
 
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 
 import cls from './Input.module.scss';
 
-type HTMLInputPropsType = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type HTMLInputPropsType = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 
 interface InputPropsType extends HTMLInputPropsType {
-    className?: string,
-    value?: string,
-    onChange?: (value: string) => void,
-    autoFocus?: boolean,
+    className?: string;
+    value?: string | number;
+    onChange?: (value: string) => void;
+    autoFocus?: boolean;
+    readOnly?: boolean;
 }
 
 export const Input = memo((props: InputPropsType) => {
     const [isFocused, setIsFocused] = useState<boolean>(false);
     const [carriagePosition, setCarriagePosition] = useState<number>(0);
     const inputRef = useRef<HTMLInputElement>(null);
+
+    const {
+        className,
+        value,
+        onChange,
+        type = 'text',
+        placeholder,
+        autoFocus,
+        readOnly,
+        ...otherProps
+    } = props;
 
     const onBlur = () => {
         setIsFocused(false);
@@ -32,20 +44,16 @@ export const Input = memo((props: InputPropsType) => {
         setCarriagePosition(e?.target?.selectionStart || 0);
     };
 
-    const {
-        className,
-        value,
-        onChange,
-        type = 'text',
-        placeholder,
-        autoFocus,
-        ...otherProps
-    } = props;
-
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
         setCarriagePosition(e.target.value.length);
     };
+
+    const mods: Mods = {
+        [cls.readOnly]: readOnly,
+    };
+
+    const isCarriageVisible = isFocused && !readOnly;
 
     useEffect(() => {
         if (autoFocus) {
@@ -55,7 +63,7 @@ export const Input = memo((props: InputPropsType) => {
     }, [autoFocus]);
 
     return (
-        <div className={classNames(cls.InputWrapper, {}, [className])}>
+        <div className={classNames(cls.InputWrapper, mods, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>
                     {`${placeholder}>`}
@@ -71,9 +79,10 @@ export const Input = memo((props: InputPropsType) => {
                     onBlur={onBlur}
                     onFocus={onFocus}
                     onSelect={onSelect}
+                    readOnly={readOnly}
                     {...otherProps}
                 />
-                {isFocused && (
+                {isCarriageVisible && (
                     <span
                         className={cls.carriage}
                         style={{ left: `${carriagePosition * 9}px` }}

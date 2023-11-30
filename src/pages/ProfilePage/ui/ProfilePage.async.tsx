@@ -1,7 +1,7 @@
-import { FC, lazy } from 'react';
+import { lazy } from 'react';
 
 export const ProfilePageAsync = lazy(() => new
-Promise<{default: FC}>((resolve) => {
+Promise<typeof import('./ProfilePage')>((resolve) => {
     // TODO delete setTimeout
     setTimeout(() => resolve(import('./ProfilePage')), 1500);
 }));
