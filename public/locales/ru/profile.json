@@ -12,5 +12,10 @@
   "Currency": "Выберите свою валюту",
   "City": "Введите свой город",
   "Avatar": "Введите ссылку на аватар",
-  "Choose currency": "Укажите валюту"
+  "Choose currency": "Укажите валюту",
+  "Server error": "Ошибка на сервере при сохранении",
+  "Data not provided": "Заполните обязательные поля",
+  "Incorrect userdata": "Имя и фамилия необходимо указать",
+  "Incorrect age": "Укажите возраст",
+  "Incorrect country": "Укажите регион"
 }

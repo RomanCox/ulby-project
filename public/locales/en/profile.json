@@ -12,5 +12,10 @@
   "Currency": "Choose your currency",
   "City": "Enter your city",
   "Avatar": "Enter link to avatar",
-  "Choose currency": "Choose currency"
+  "Choose currency": "Choose currency",
+  "Server error": "Error on the server when saving data",
+  "Data not provided": "Fill in required fields",
+  "Incorrect userdata": "First name and Last name are required",
+  "Incorrect age": "Please indicate your age",
+  "Incorrect country": "Please indicate your region"
 }
