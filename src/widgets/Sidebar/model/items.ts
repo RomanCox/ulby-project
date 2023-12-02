@@ -2,6 +2,7 @@ import { SVGProps, VFC } from 'react';
 import MainIcon from 'shared/assets/icons/main-20-20.svg';
 import AboutIcon from 'shared/assets/icons/about-20-20.svg';
 import ProfileIcon from 'shared/assets/icons/profile-20-20.svg';
+import ArticleIcon from 'shared/assets/icons/article-20-20.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 export interface SidebarItemType {
@@ -25,6 +26,18 @@ export const SidebarItemsList: SidebarItemType[] = [
     {
         path: RoutePath.profile,
         text: 'Profile',
+        Icon: ProfileIcon,
+        authOnly: true,
+    },
+    {
+        path: RoutePath.articles,
+        text: 'Articles',
+        Icon: ArticleIcon,
+        authOnly: true,
+    },
+    {
+        path: RoutePath.article_details,
+        text: 'Article Details',
         Icon: ProfileIcon,
         authOnly: true,
     },
