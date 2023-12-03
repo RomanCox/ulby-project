@@ -12,7 +12,7 @@ export const validateProfileData = (profile?: Profile) => {
         country,
     } = profile;
 
-    const errors: ValidateProfileError[] = [];
+    const errors: Array<ValidateProfileError> = [];
 
     if (!firstName || !lastName) {
         errors.push(ValidateProfileError.INCORRERT_USER_DATA);

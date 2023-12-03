@@ -12,7 +12,7 @@ export interface SidebarItemType {
     authOnly?: boolean;
 }
 
-export const SidebarItemsList: SidebarItemType[] = [
+export const SidebarItemsList: Array<SidebarItemType> = [
     {
         path: RoutePath.main,
         text: 'Main',
@@ -33,12 +33,6 @@ export const SidebarItemsList: SidebarItemType[] = [
         path: RoutePath.articles,
         text: 'Articles',
         Icon: ArticleIcon,
-        authOnly: true,
-    },
-    {
-        path: RoutePath.article_details,
-        text: 'Article Details',
-        Icon: ProfileIcon,
         authOnly: true,
     },
 ];

@@ -4,7 +4,7 @@ import { getUserAuthData } from 'entities/User';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 interface RequireAuthPropsType {
-    children: JSX.Element
+    children: JSX.Element;
 }
 
 export const RequireAuth = ({ children }: RequireAuthPropsType) => {

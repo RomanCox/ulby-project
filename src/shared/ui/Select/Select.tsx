@@ -12,7 +12,7 @@ export interface SelectOption {
 interface SelectPropsType {
     className?: string;
     label?: string;
-    options?: SelectOption[];
+    options?: Array<SelectOption>;
     value?: string;
     onChange?: (value: string) => void;
     readOnly?: boolean;

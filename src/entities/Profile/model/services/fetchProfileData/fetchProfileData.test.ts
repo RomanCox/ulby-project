@@ -13,7 +13,7 @@ const data = {
     currency: Currency.BTC,
 };
 
-describe('fetchProfileData.test', () => {
+describe('fetchArticleById.test', () => {
     test('success', async () => {
         const thunk = new TestAsyncThunk(fetchProfileData);
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));
