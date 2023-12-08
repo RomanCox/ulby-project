@@ -25,5 +25,7 @@
   "Cancel": "Отменить",
   "Save": "Сохранить",
   "Choose currency": "Укажите валюту",
-  "Choose country": "Укажите страну"
+  "Choose country": "Укажите страну",
+  "Enter comment": "Введите текст комментария",
+  "Send": "Отправить"
 }

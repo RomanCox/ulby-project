@@ -23,7 +23,7 @@ import {
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetailsSelectors';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
-import { articleDetailsReducer } from '../../model/slice/ArticleDetailsSlice';
+import { articleDetailsReducer } from 'entities/Article/model/slices/ArticleDetailsSlice';
 
 import cls from './ArticleDetails.module.scss';
 
@@ -108,7 +108,7 @@ export const ArticleDetails = memo((props: ArticleDetailsPropsType) => {
     }
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={reducers}>
             <div className={classNames(cls.ArticleDetails, {}, [className])}>
                 {content}
             </div>

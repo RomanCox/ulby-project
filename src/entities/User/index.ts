@@ -9,7 +9,7 @@ export {
 export {
     userReducer,
     userActions,
-} from './model/slice/userSlice';
+} from 'entities/User/model/slices/userSlice';
 
 export {
     UserSchema,

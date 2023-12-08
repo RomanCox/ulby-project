@@ -56,7 +56,7 @@ const SoapPage = () => {
     };
 
     const costRequest = async () => {
-        await axios.post<Array<CityType>>('http://localhost:8000/cost', data)
+        await axios.post<CityType[]>('http://localhost:8000/cost', data)
             .then((res) => console.log(res.data));
     };
 

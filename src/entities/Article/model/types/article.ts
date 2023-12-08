@@ -12,7 +12,7 @@ export interface ArticleBlockBase {
 export interface ArticleTextBlock extends ArticleBlockBase {
     type: ArticleBlockType.TEXT;
     title?: string;
-    paragraphs: Array<string>;
+    paragraphs: string[];
 }
 
 export interface ArticleImageBlock extends ArticleBlockBase {
@@ -41,6 +41,6 @@ export interface Article {
     img: string;
     views: number;
     createdAt: string;
-    type: Array<ArticleType>;
-    blocks: Array<ArticleBlock>;
+    type: ArticleType[];
+    blocks: ArticleBlock[];
 }

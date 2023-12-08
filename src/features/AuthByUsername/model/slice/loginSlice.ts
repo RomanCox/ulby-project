@@ -2,10 +2,6 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { LoginSchema } from 'features/AuthByUsername/model/types/loginSchema';
 import { loginByUsername } from '../services/loginByUsername/loginByUsername';
 
-export interface CounterState {
-    value: number;
-}
-
 const initialState: LoginSchema = {
     username: '',
     password: '',

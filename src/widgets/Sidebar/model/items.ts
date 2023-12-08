@@ -12,7 +12,7 @@ export interface SidebarItemType {
     authOnly?: boolean;
 }
 
-export const SidebarItemsList: Array<SidebarItemType> = [
+export const SidebarItemsList: SidebarItemType[] = [
     {
         path: RoutePath.main,
         text: 'Main',
