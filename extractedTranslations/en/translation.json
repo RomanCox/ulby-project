@@ -9,6 +9,7 @@
   "Articles page": "Articles page",
   "Authorization form": "Authorization form",
   "Avatar": "Avatar",
+  "Back": "Back",
   "Cancel": "Cancel",
   "Choose country": "Choose country",
   "Choose currency": "Choose currency",
@@ -31,6 +32,13 @@
   "Page not found": "Page not found",
   "Profile": "Profile",
   "Profile page": "Profile page",
+  "Read": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Reload page": "Reload page",
   "Save": "Save",
   "Send": "Send",

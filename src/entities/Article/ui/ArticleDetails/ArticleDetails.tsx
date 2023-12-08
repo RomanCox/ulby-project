@@ -16,6 +16,7 @@ import { ArticleCodeBlockComponent } from 'entities/Article/ui/ArticleCodeBlockC
 import { ArticleTextBlockComponent } from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { articleDetailsReducer } from 'entities/Article/model/slices/ArticleDetailsSlice';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 import {
     getArticleDetailsData,
@@ -23,7 +24,6 @@ import {
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetailsSelectors';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
-import { articleDetailsReducer } from 'entities/Article/model/slices/ArticleDetailsSlice';
 
 import cls from './ArticleDetails.module.scss';
 
