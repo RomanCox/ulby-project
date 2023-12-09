@@ -9,9 +9,8 @@ import { useSelector } from 'react-redux';
 import { Page } from 'shared/ui/Page/Page';
 import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import {
-    getArticlesPageHasMore,
     // getArticlesPageError,
-    getArticlesPageIsLoading, getArticlesPageNum,
+    getArticlesPageIsLoading,
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
@@ -32,8 +31,6 @@ const ArticlesPage = () => {
     const isLoading = useSelector(getArticlesPageIsLoading);
     // const error = useSelector(getArticlesPageError);
     const view = useSelector(getArticlesPageView);
-    const page = useSelector(getArticlesPageNum);
-    const hasMore = useSelector(getArticlesPageHasMore);
 
     const onChangeView = useCallback((view: ArticlesView) => {
         dispatch(articlesPageActions.setView(view));
