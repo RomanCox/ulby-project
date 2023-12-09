@@ -4,5 +4,5 @@ import { ArticleDetailsPageProps } from 'pages/ArticleDetailsPage/ui/ArticleDeta
 export const ArticleDetailsPageAsync = lazy(() => new
 Promise<{default: FC<ArticleDetailsPageProps>}>((resolve) => {
     // TODO delete setTimeout
-    setTimeout(() => resolve(import('./ArticleDetailsPage')), 1500);
+    setTimeout(() => resolve(import('./ArticleDetailsPage')), 400);
 }));

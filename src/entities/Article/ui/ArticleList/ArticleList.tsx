@@ -41,7 +41,6 @@ export const ArticleList = memo((props: ArticleListPropsType) => {
             key={article.id}
             className={cls.card}
             article={article}
-            // view={ArticlesView.BIG}
             view={view}
         />
     );

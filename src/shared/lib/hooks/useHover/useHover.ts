@@ -4,7 +4,6 @@ interface UseHoverBind {
     onMouseEnter: () => void;
     onMouseLeave: () => void;
 }
-
 type UseHoverResult = [boolean, UseHoverBind];
 
 export const useHover = () => {
@@ -24,5 +23,5 @@ export const useHover = () => {
             onMouseEnter,
             onMouseLeave,
         },
-    ], [isHover, onMouseEnter, onMouseLeave]);
+    ] as UseHoverResult, [isHover, onMouseEnter, onMouseLeave]);
 };
