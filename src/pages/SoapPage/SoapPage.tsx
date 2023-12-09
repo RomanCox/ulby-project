@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from 'shared/ui/Button/Button';
 import axios from 'axios';
+import { Page } from 'shared/ui/Page/Page';
 
 interface CityType {
     cityCode: string;
@@ -61,12 +62,12 @@ const SoapPage = () => {
     };
 
     return (
-        <div>
+        <Page>
             {/* eslint-disable-next-line i18next/no-literal-string */}
             <Button onClick={cityInfoRequest}>CityInfo</Button>
             {/* eslint-disable-next-line i18next/no-literal-string */}
             <Button onClick={costRequest}>Cost</Button>
-        </div>
+        </Page>
     );
 };
 
