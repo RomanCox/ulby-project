@@ -34,7 +34,7 @@ const AddCommentForm = memo((props: AddCommentFormPropsType) => {
     }, [dispatch]);
 
     const onSendHandler = useCallback(() => {
-        onSendComment(text || '');
+        onSendComment(text);
         onCommentTextChange('');
     }, [onCommentTextChange, onSendComment, text]);
 

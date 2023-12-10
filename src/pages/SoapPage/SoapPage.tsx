@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from 'shared/ui/Button/Button';
 import axios from 'axios';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 
 interface CityType {
     cityCode: string;
