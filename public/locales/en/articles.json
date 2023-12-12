@@ -1,4 +1,17 @@
 {
   "Articles page": "Articles page",
-  "Read...": "Read..."
+  "Read...": "Read...",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "by": "by",
+  "ascending": "ascending",
+  "descending": "descending",
+  "created date": "created date",
+  "title": "title",
+  "views": "views",
+  "ALL": "All",
+  "IT": "IT",
+  "SCIENCE": "Science",
+  "ECONOMICS": "Economic",
+  "Articles not found": "Articles not found"
 }
