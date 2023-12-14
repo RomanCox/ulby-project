@@ -1,25 +1,17 @@
 {
-  "": "",
-  "ALL": "",
-  "Article not found": "",
-  "Articles not found": "",
-  "Articles page": "",
-  "ECONOMICS": "",
-  "IT": "",
-  "Read": {
-    "": {
-      "": {
-        "": ""
-      }
-    }
-  },
-  "SCIENCE": "",
-  "Search": "",
-  "Sort by": "",
-  "ascending": "",
-  "by": "",
-  "created date": "",
-  "descending": "",
-  "title": "",
-  "views": ""
+  "Articles page": "Articles page",
+  "Read...": "Read...",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "by": "by",
+  "ascending": "ascending",
+  "descending": "descending",
+  "created date": "created date",
+  "title": "title",
+  "views": "views",
+  "ALL": "All",
+  "IT": "IT",
+  "SCIENCE": "Science",
+  "ECONOMICS": "Economic",
+  "Articles not found": "Articles not found"
 }

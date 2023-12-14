@@ -1,6 +1,9 @@
 {
-  "An error has occurred": "",
-  "Article not found": "",
-  "Back": "",
-  "Comments": ""
+  "Article Details": "Article Details",
+  "Article not found": "Article not found",
+  "Error": "An error has occurred",
+  "Comments": "Comments",
+  "Recommendations": "Recommendations",
+  "Back": "Back to list",
+  "Edit": "Edit"
 }

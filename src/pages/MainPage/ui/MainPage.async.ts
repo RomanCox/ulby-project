@@ -1,7 +1,3 @@
-import { FC, lazy } from 'react';
+import { lazy } from 'react';
 
-export const MainPageAsync = lazy(() => new
-Promise<{default: FC}>((resolve) => {
-    // TODO delete setTimeout
-    setTimeout(() => resolve(import('./MainPage')), 400);
-}));
+export const MainPageAsync = lazy(() => import('./MainPage'));
