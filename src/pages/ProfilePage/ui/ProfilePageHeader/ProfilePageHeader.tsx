@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -12,7 +12,6 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
 import { HStack } from 'shared/ui/Stack';
-import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderPropsType {
     className?: string;
@@ -43,7 +42,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderPropsType) => 
         <HStack max justify="between" className={classNames('', {}, [className])}>
             <Text title={t('User Profile')} />
             {canEdit && (
-                <>
+                <div>
                     {readOnly
                         ? (
                             <Button
@@ -69,7 +68,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderPropsType) => 
                                 </Button>
                             </HStack>
                         )}
-                </>
+                </div>
             )}
         </HStack>
     );

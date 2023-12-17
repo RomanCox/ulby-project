@@ -34,7 +34,6 @@ describe('userSlice.test', () => {
     });
 
     test('test logout', () => {
-        const lsData = localStorage.getItem(USER_LOCALSTORAGE_KEY);
         const state: DeepPartial<User> = user;
         expect(userReducer(
             state as UserSchema,
