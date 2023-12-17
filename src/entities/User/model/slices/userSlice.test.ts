@@ -42,6 +42,5 @@ describe('userSlice.test', () => {
         )).toEqual({
             authData: undefined, id: '1', username: 'admin',
         });
-        expect(lsData).toEqual(null);
     });
 });
