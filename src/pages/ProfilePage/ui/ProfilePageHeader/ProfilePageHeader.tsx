@@ -11,13 +11,14 @@ import {
 } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
+import { HStack } from 'shared/ui/Stack';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderPropsType {
     className?: string;
 }
 
-const ProfilePageHeader = ({ className }: ProfilePageHeaderPropsType) => {
+export const ProfilePageHeader = ({ className }: ProfilePageHeaderPropsType) => {
     const { t } = useTranslation();
     const authData = useSelector(getUserAuthData);
     const profileData = useSelector(getProfileData);
@@ -39,42 +40,37 @@ const ProfilePageHeader = ({ className }: ProfilePageHeaderPropsType) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+        <HStack max justify="between" className={classNames('', {}, [className])}>
             <Text title={t('User Profile')} />
             {canEdit && (
-                <div className={cls.btnsWrapper}>
+                <>
                     {readOnly
                         ? (
                             <Button
                                 theme={ButtonTheme.OUTLINE}
-                                className={cls.editBtn}
                                 onClick={onEdit}
                             >
                                 {t('Edit')}
                             </Button>
                         )
                         : (
-                            <>
+                            <HStack gap="8">
                                 <Button
                                     theme={ButtonTheme.OUTLINE_RED}
-                                    className={cls.editBtn}
                                     onClick={onCancelEdit}
                                 >
                                     {t('Cancel')}
                                 </Button>
                                 <Button
                                     theme={ButtonTheme.OUTLINE}
-                                    className={cls.saveBtn}
                                     onClick={onSave}
                                 >
                                     {t('Save')}
                                 </Button>
-                            </>
+                            </HStack>
                         )}
-                </div>
+                </>
             )}
-        </div>
+        </HStack>
     );
 };
-
-export default ProfilePageHeader;
