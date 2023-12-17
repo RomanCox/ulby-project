@@ -1,7 +1,10 @@
-import {
-    User, userActions, userReducer, UserSchema,
-} from 'entities/User';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
+import {
+    User, UserSchema,
+} from '../types/user';
+import {
+    userActions, userReducer,
+} from '../slices/userSlice';
 
 const user: User = {
     id: '1',

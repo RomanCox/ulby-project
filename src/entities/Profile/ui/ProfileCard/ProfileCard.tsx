@@ -5,12 +5,12 @@ import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/Input';
-import { Profile } from 'entities/Profile';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Currency } from 'entities/Currency';
 import { CurrencySelect } from 'entities/Currency/ui/CurrencySelect/CurrencySelect';
 import { Country, CountrySelect } from 'entities/Country';
+import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 
 interface ProfileCardPropsType {

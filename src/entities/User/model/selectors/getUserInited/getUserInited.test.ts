@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getUserInited } from 'entities/User';
+import { getUserInited } from '../getUserInited/getUserInited';
 
 describe('getUserInited.test', () => {
     test('should return _inited', () => {

@@ -3,11 +3,10 @@ import React, {
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 
-import Portal from 'shared/ui/Portal/Portal';
-
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 
 import { useTheme } from 'app/providers/ThemeProvider';
+import Portal from '../Portal/Portal';
 import cls from './Modal.module.scss';
 
 interface ModalPropsType {

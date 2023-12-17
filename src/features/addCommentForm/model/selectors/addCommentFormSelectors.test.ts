@@ -2,7 +2,7 @@ import { StateSchema } from 'app/providers/StoreProvider';
 import {
     getAddCommentFormError,
     getAddCommentFormText,
-} from 'features/addCommentForm/model/selectors/addCommentFormSelectors';
+} from '../selectors/addCommentFormSelectors';
 
 describe('addCommentFormSelectors.test', () => {
     test('should return data', () => {
