@@ -4,6 +4,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui/Select/Select';
+import { ListBox } from 'shared/ui/ListBox/ListBox';
 import { Country } from '../../model/types/country';
 
 interface CurrencySelectPropsType {
@@ -35,13 +36,15 @@ export const CountrySelect = memo((props: CurrencySelectPropsType) => {
     }, [onChange]);
 
     return (
-        <Select
-            className={classNames('', {}, [className])}
+        <ListBox
+            className={className}
             label={t('Choose country')}
             value={value}
-            options={options}
+            items={options}
             onChange={onChangeHandler}
+            defaultValue={t('Choose country')}
             readOnly={readOnly}
+            direction="top"
         />
     );
 });
