@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 
@@ -9,7 +9,9 @@ type FlexAlign = 'start' | 'center' | 'end';
 type FlexDirection = 'row' | 'column';
 type FlexGap = '4' | '8' | '16' | '32';
 
-export interface FlexPropsType {
+type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+
+export interface FlexPropsType extends DivProps {
     className?: string;
     children: ReactNode;
     justify?: FlexJustify;
