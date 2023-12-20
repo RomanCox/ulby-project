@@ -17,5 +17,6 @@
   "Data not provided": "Fill in required fields",
   "Incorrect userdata": "First name and Last name are required",
   "Incorrect age": "Please indicate your age",
-  "Incorrect country": "Please indicate your region"
+  "Incorrect country": "Please indicate your region",
+  "Profile not found": "Profile not found"
 }

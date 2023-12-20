@@ -28,4 +28,19 @@ module.exports = async (layer, sliceName) => {
             console.log(`Can't create the model segment for slice ${sliceName}`, e);
         }
     };
+
+    const createSchemaType = async () => {
+        try {
+            await fs.writeFile(
+                resolveModelPath('types', `${sliceName}Schema.ts`),
+                schemaTypeTemplate(sliceName),
+            );
+        } catch (e) {
+            console.log('Can\'t create the type schema of state', e);
+        }
+    };
+
+    await createModelStructure();
+    await createReduxSlice();
+    await createSchemaType();
 };

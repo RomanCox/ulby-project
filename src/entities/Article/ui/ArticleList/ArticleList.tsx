@@ -61,12 +61,6 @@ export const ArticleList = memo((props: ArticleListPropsType) => {
 
         return (
             <div key={key} className={cls.row}>
-                {/* <ArticleListItem */}
-                {/*    className={cls.card} */}
-                {/*    article={articles[index]} */}
-                {/*    view={view} */}
-                {/*    target={target} */}
-                {/* /> */}
                 {items}
             </div>
         );

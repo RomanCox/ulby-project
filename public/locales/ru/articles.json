@@ -13,5 +13,6 @@
   "IT": "IT",
   "SCIENCE": "Наука",
   "ECONOMICS": "Экономика",
-  "Articles not found": "Статьи не найдены"
+  "Articles not found": "Статьи не найдены",
+  "Error": "Ошибка при загрузке статей"
 }

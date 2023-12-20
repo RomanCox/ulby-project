@@ -1,4 +1,5 @@
 {
+  "": "",
   "Avatar": "Enter link to avatar",
   "Choose currency": "Choose currency",
   "City": "Enter your city",
@@ -11,6 +12,7 @@
   "Incorrect country": "Please indicate your region",
   "Incorrect userdata": "First name and Last name are required",
   "Profile": "Profile",
+  "Profile not found": "",
   "Reload page": "Reload page",
   "Server error": "Error on the server when saving data",
   "User Profile": "User profile",

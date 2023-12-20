@@ -17,5 +17,6 @@
   "Data not provided": "Заполните обязательные поля",
   "Incorrect userdata": "Имя и фамилия необходимо указать",
   "Incorrect age": "Укажите возраст",
-  "Incorrect country": "Укажите регион"
+  "Incorrect country": "Укажите регион",
+  "Profile not found": "Профиль не найден"
 }
