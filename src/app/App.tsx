@@ -20,7 +20,7 @@ function App() {
     }, [dispatch]);
 
     return (
-        <div className={classNames('app', {}, [])}>
+        <div className={classNames('ap  p', {}, [])}>
             <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">
