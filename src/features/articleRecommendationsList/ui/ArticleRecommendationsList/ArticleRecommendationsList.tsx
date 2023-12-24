@@ -13,9 +13,9 @@ interface ArticleRecommendationsListPropsType {
 export const ArticleRecommendationsList = memo((props: ArticleRecommendationsListPropsType) => {
     const { className } = props;
     const { t } = useTranslation();
-    const { isLoading, data: articles } = useArticleRecommendationsList(3);
+    const { isLoading, data: articles, error } = useArticleRecommendationsList(3);
 
-    if (isLoading) {
+    if (isLoading || error || !articles) {
         return null;
     }
 
@@ -28,6 +28,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
             <ArticleList
                 articles={articles}
                 target="_blank"
+                virtualized={false}
             />
         </VStack>
     );

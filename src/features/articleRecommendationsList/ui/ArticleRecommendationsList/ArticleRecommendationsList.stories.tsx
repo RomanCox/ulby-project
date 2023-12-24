@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
 
 export default {
-    title: 'features/ArticleRecommendationsList',
+    title: 'features/articleRecommendationsList',
     component: ArticleRecommendationsList,
     argTypes: {
         backgroundColor: { control: 'color' },
