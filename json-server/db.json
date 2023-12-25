@@ -570,12 +570,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
+      "roles": ["ADMIN"],
       "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
     },
     {
       "id": "2",
-      "username": "marycox",
+      "username": "marius_cox",
       "password": "321",
+      "roles": ["USER"],
+      "avatar": "https://miro.medium.com/v2/resize:fit:640/format:webp/0*ngAthWxOvKZHvsw9"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "321",
+      "roles": ["MANAGER"],
       "avatar": "https://miro.medium.com/v2/resize:fit:640/format:webp/0*ngAthWxOvKZHvsw9"
     }
   ],
@@ -597,7 +606,7 @@
       "currency": "USD",
       "country": "Belarus",
       "city": "Minsk",
-      "username": "marycox",
+      "username": "marius_cox",
       "avatar": "https://miro.medium.com/v2/resize:fit:640/format:webp/0*ngAthWxOvKZHvsw9",
       "firstName": "Marius",
       "lastName": "Cox"

@@ -6,7 +6,6 @@ import { AppLink } from '../AppLink/AppLink';
 import cls from './DropDown.module.scss';
 
 export interface DropDownItem {
-    value: string;
     content: ReactNode;
     disabled?: boolean;
     onClick?: () => void;
@@ -46,7 +45,7 @@ export const DropDown = (props: DropDownPropsType) => {
                 {items.map((item) => {
                     const content = ({ active }: {active: boolean}) => (
                         <button
-                            key={item.value}
+                            key={item.href}
                             type="button"
                             disabled={item.disabled}
                             onClick={item.onClick}
