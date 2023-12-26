@@ -28,7 +28,7 @@ import {
 
 interface EditableProfileCardPropsType {
     className?: string;
-    id: string;
+    id?: string;
 }
 
 const reducers: ReducersList = {
